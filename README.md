@@ -7,3 +7,6 @@ Git and github video, in portuguese:https://www.youtube.com/watch?v=pyM5QLS2h6M
 
 After that, a saw a video about terminal, shell, command line and prompt and those are pretty simple concepts at least as a beginner. terminal is the software which emulate the old terminal, in which you can, by a command line, write and run prompts and,from this structure, run commands.
 terminal, shell, command line and prompt video, in english:https://www.youtube.com/watch?v=hMSByvFHOro
+
+
+we should learn about, rag, fine tuning, skils, agents, multi agentes, AI multimodal,Subagentes, .md, memory, harness, loop engenering... 
