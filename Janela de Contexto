@@ -1,0 +1,9 @@
+Memória de trabalho do modelo de linguagem. Define por quanto tempo a LLM pode conversar até começar a esquecer detalhes enviados antes
+
+A janela de contexto é pre definida pra cada modelo, podendo ser maior dependendo da capacidade do modelo de "olhar pra trás"
+
+A medida que a conversa avança, o modelo perde a capacidade de ter memória das primeiras conversas
+
+O procedimento padrão do modelo é de "educadamente inferir" informações perdidas
+
+Capacidade Atual máxima é de 1Mi de tokens
