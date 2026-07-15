@@ -1,0 +1,11 @@
+Tokens são a menor unidade de texto utilizada por LLMs para processar linguagem natural (a forma como nos comunicamos) e gerar imagem natural (resposta do LLM). Antes de ler um texto o modelo quebra ele em pequenos pedaços: Tokens.
+
+Via de regra é definido que 100 tokens equivalem a 75 palavras ou 1 token equivale a 0,75 palavras.
+
+Hello World --> 2 Tokens e 11 caracteres
+
+No mercado de LLMs e Chat Bots assistentes, nós pagamos por tokens e não palavras, quando temos um modelo mais rápido isso também quer dizer que temos um modelo que gasta mais tokens p/ segundo.
+
+Input Tokens: prompts enviados e comandos enviados pro modelo
+
+Output Tokens: Respostas do modelo (geralmente custam mais que input tokens)
