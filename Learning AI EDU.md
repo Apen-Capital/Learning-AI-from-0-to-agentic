@@ -10,3 +10,9 @@ terminal, shell, command line and prompt video, in english:https://www.youtube.c
 
 
 we should learn about, rag, fine tuning, skils, agents, multi agentes, AI multimodal,Subagentes, .md, memory, harness, loop engenering... 
+
+03.08.2026 - i started claude code 101 course from anthropic courses.
+they started the course talking about agentic loop (how the claude code works), then they talked about context window, which when you reach the limit, the code gonna compact, resuming what it belived could be resumed and keeping what had to be keeped in this context to keep works.
+claude code also uses tools, which is the backbone of the entrie tool. They can call a bunch of tools to complete a task.
+
+some steps ahead, they talk about plan mode, how tools are useful to enable code do more without back and forth, and then they also talked about test issue, which i dont know what is, but it seems like a test
