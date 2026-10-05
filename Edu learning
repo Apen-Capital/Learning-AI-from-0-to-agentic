@@ -1,0 +1,55 @@
+# Learning-AI-from-0-to-agentic
+That is the remote repository wich has the entire context that was used to teach knowledge into our TD team.
+At first, a tried, with the claude code, with no previus context, create a way to learn, from 0, how to use AI in a native way.
+
+i had started to learn about AI by learning about git and github. i started it, by my self, because i know is important to build a remote context for everywone, and make it to be possible colaborate and be used as context for others how would try to learn about AI in the company.
+Git and github video, in portuguese:https://www.youtube.com/watch?v=pyM5QLS2h6M
+
+After that, a saw a video about terminal, shell, command line and prompt and those are pretty simple concepts at least as a beginner. terminal is the software which emulate the old terminal, in which you can, by a command line, write and run prompts and,from this structure, run commands.
+terminal, shell, command line and prompt video, in english:https://www.youtube.com/watch?v=hMSByvFHOro
+
+
+we should learn about, rag, fine tuning, skils, agents, multi agentes, AI multimodal,Subagentes, .md, memory, harness, loop engenering... 
+
+03.08.2026 - i started claude code 101 course from anthropic courses.
+they started the course talking about agentic loop (how the claude code works), then they talked about context window, which when you reach the limit, the code gonna compact, resuming what it belived could be resumed and keeping what had to be keeped in this context to keep works.
+claude code also uses tools, which is the backbone of the entrie tool. They can call a bunch of tools to complete a task.
+
+some steps ahead, they talk about plan mode, how tools are useful to enable code do more without back and forth, and then they also talked about test issue, which i dont know what is, but it seems like a test
+
+-----------------------------------------------------------------------------------------HOW IT WORKS (CLAUDE CODE)-------------------------------------------------------------------------------------------------
+Claude code use *semantic context* to know when it would call a tool to get the output from.
+Claude code works throug many agentic concepts like permission mode, agentic loop, tools, management context window...
+
+-----------------------------------------------------------------------------------------PROMPTS-----------------------------------------------------------------------------------------------------------------
+about prompts in claude code: there are different things that u could consider to protect or make things easier for you (the video said nothing about prompt)
+
+-----------------------------------------------------------------------------------------EXPLORE PLANS CODE COMMIT-------------------------------------------------------------------------------------------------
+the next video talks about a workflow to works with in claude code. its about explore - plans - code - commit.
+to execute explore + Plans, they recommend use the plan mode, because it can just call reads tools, and it goes through your context to know more about the problem, and after that it builds a plan, which not editted nothing your files.  After that, they also recommend move foward with the plan mode to the code. going to the finish, they says to run a subagent to look at our code and check if its well done.
+
+-----------------------------------------------------------------------------------------CONTEXT WINDOW-------------------------------------------------------------------------------------------------------------
+context window - that video was really cool. it started talking about how context works and what is it actually. when you send a prompt, the agent start to calls tools, get that input, recieve tools outputs, figure out it own output and all of it goes to the window. As long as you go with more and more prompts, each prompts fill your window, and each prompt recall your context to answer the new command you wrote.
+
+-----------------------------------------------------------------------------------------CODE REVIEW----------------------------------------------------------------------------------------------------------------
+the next video is about code review. They advice us to, before push a PR, ask claude to use a subagent to review what you have dane. the run with fresh eyes, because they have a new context window. i can create a config, which set subagents things like permissions, in the repo.
+
+-----------------------------------------------------------------------------------------SUBAGENTS-----------------------------------------------------------------------------------------------------------------
+after that, Subagents. they run with their own new context window, and they receive, from the main agent, a system prompt with tools, small context and more... and a task to complete. we should call subagents when need a short answer like: there is any btg API or WEBHOOK on in the CRM?
+
+we can create our subagent by /agents. that way let claude generate for us, and leads us through many steps to get it done. we gona chose the purpose, the scope, the tools it will access, and even pick a color.
+we can also set a persistent memory, which is good when you are working in the same project for a long time, and the agent que carry presetted skills by adding the skill kay.
+
+-----------------------------------------------------------------------------------------SKILLS-----------------------------------------------------------------------------------------------------------------
+skills are specific and knowledge ways to complete tasks. If you are explaning something repetitively to claude code, that is a skills waiting to be write. 
+skills are claude.md which dont go to your context model. you can call a skill, but claude can recognize, by the skill's descript, when call a script to complete a task.
+
+-----------------------------------------------------------------------------------------MCPs-----------------------------------------------------------------------------------------------------------------
+when you are working into a project, there are many sources that you probabilly want claude get the context from. MCP is the way to get it. MCP is a way to let claude code communicate with a date base or a tool to que get context to it context window.
+it's important to say that claude automatically understands when have to call a MCP to get that task complete.
+-----------------------------------------------------------------------------------------HOOK-----------------------------------------------------------------------------------------------------------------
+Hooks are deterministic commands that guarantee certain rules are enforced in your project.
+
+For example, in our Conecta codebase, we may not want an agent to call the CRM API because it contains clients' personal data. A prompt alone is not enough to reliably prevent that.
+
+Instead, we can create a hook that runs before the agent calls the CRM API. The hook blocks the request, explains why the action is not allowed, and prevents the agent from proceeding. 
