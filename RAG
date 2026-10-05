@@ -1,7 +1,0 @@
-RAG é uma Técnica de conexão do modelo de lingugaem com bases externas e atualizadas do mundo real
-
-Mesmo com bancos de treinamento extensos, LLMs não conseguem saber o que aconteceu hoje ou fora do seu banco de dados
-
-o RAG aumenta a precisão e embasamento no prompt do usuário e vira informação nova para ser processada
-
-Esse processo diminui drasticamente alucinações e mantém o modelo atualizado
